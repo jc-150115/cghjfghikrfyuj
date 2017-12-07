@@ -63,13 +63,7 @@ namespace SQLite11
             Insert.Clicked += InsertClicked;
             layout.Children.Add(insertEntry);
 
-            insertEntry = new Entry
-            {
-                WidthRequest = 60
-            };
-            layout.Children.Add(Insert);
-            Insert.Clicked += InsertClicked;
-            layout.Children.Add(insertEntry);
+            
 
             //--------------------------------selectします------------------------------
             /*var Select = new Button
