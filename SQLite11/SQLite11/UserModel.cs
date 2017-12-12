@@ -58,7 +58,7 @@ namespace SQLite11
                     //データベースにUserテーブルを作成する
                     db.CreateTable<UserModel>();
 
-                    db.Insert(new UserModel() { Id = id , Name = name  });//
+                    db.Insert(new UserModel() { Id = id , Name = name  });
                     db.Commit();
                 }
                 catch (Exception e)
