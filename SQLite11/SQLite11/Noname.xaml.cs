@@ -18,12 +18,12 @@ namespace SQLite11
         {
             InitializeComponent();
 
-            var query = UserModel.selectUser(); //中身はSELECT * FROM [User]
-            var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
-            foreach (var user in query)
+            var query2 = UserModel.selectUser(); //中身はSELECT * FROM [User]
+            var layout2 = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+            foreach (var user in query2)
             {
                 //Userテーブルの名前列をLabelに書き出す
-                layout.Children.Add(new Label { Text = user.Name });
+                layout2.Children.Add(new Label { Text = user.Name });
             }
 
             
@@ -34,16 +34,23 @@ namespace SQLite11
                 Text = "削除",
                 TextColor = Color.Aqua,
             };
-            layout.Children.Add(Delete);
+            layout2.Children.Add(Delete);
             Delete.Clicked += DeleteClicked;
 
             void DeleteClicked(object sender, EventArgs e)
             {
                 UserModel.deleteUser(deleteId);
                 UserModel.deleteUser(1);
+                var query1 = UserModel.selectUser(); //中身はSELECT * FROM [User]
+                var layout1 = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+                foreach (var user in query1)
+                {
+                    //Userテーブルの名前列をLabelに書き出す
+                    layout1.Children.Add(new Label { Text = user.Name });
+                }
             }
 
-            Content = layout;
+            Content = layout2;
         }
     }
 }
