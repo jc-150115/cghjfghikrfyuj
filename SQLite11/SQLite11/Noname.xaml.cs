@@ -12,7 +12,7 @@ namespace SQLite11
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Noname : ContentPage
     {
-        private int deleteId;
+         int deleteId;
 
        public Noname()
         {
