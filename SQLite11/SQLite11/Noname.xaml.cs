@@ -15,7 +15,7 @@ namespace SQLite11
          private int DeleteId;
         private Entry deleteEntry;
 
-       public Noname()
+        public Noname()
         {
             InitializeComponent();
 
@@ -27,7 +27,7 @@ namespace SQLite11
                 layout.Children.Add(new Label { Text = user.Name });
             }
 
-            
+
 
             var Delete = new Button
             {
@@ -43,12 +43,18 @@ namespace SQLite11
             {
                 UserModel.DeleteUser(DeleteId);
                 UserModel.DeleteUser(1);
-                var query1 = UserModel.SelectUser();
+                var query1 = UserModel.SelectUser(); //中身はSELECT * FROM [User]
+                var layout1 = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+                foreach (var user in query1)
+                {
+                    //Userテーブルの名前列をLabelに書き出す
+                    layout1.Children.Add(new Label { Text = user.Name });
+                }
             }
 
             Content = layout;
-        }
 
+        }
         
     }
 }
