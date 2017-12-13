@@ -41,7 +41,6 @@ namespace SQLite11
 
             void DeleteClicked(object sender, EventArgs e)
             {
-                UserModel.DeleteUser(DeleteId);
                 UserModel.DeleteUser(1);
                 var query1 = UserModel.SelectUser(); //中身はSELECT * FROM [User]
                 var layout1 = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
