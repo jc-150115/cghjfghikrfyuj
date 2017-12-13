@@ -12,7 +12,8 @@ namespace SQLite11
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Noname : ContentPage
     {
-         int DeleteId;
+         private int DeleteId;
+        private Entry deleteEntry;
 
        public Noname()
         {
@@ -42,6 +43,7 @@ namespace SQLite11
             {
                 UserModel.DeleteUser(DeleteId);
                 UserModel.DeleteUser(1);
+                var query1 = UserModel.SelectUser();
             }
 
             Content = layout;
