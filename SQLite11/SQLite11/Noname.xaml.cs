@@ -12,13 +12,13 @@ namespace SQLite11
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Noname : ContentPage
     {
-         int deleteId;
+         int DeleteId;
 
        public Noname()
         {
             InitializeComponent();
 
-            var query = UserModel.selectUser(); //中身はSELECT * FROM [User]
+            var query = UserModel.SelectUser(); //中身はSELECT * FROM [User]
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
             foreach (var user in query)
             {
@@ -40,8 +40,8 @@ namespace SQLite11
 
             void DeleteClicked(object sender, EventArgs e)
             {
-                UserModel.deleteUser(deleteId);
-                UserModel.deleteUser(1);
+                UserModel.DeleteUser(DeleteId);
+                UserModel.DeleteUser(1);
             }
 
             Content = layout;

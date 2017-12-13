@@ -49,9 +49,9 @@ namespace SQLite11
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
 
-            UserModel.insertUser("鈴木");
-            UserModel.insertUser("田中");
-            UserModel.insertUser("斎藤");
+            UserModel.InsertUser("鈴木");
+            UserModel.InsertUser("田中");
+            UserModel.InsertUser("斎藤");
 
 
 
@@ -92,7 +92,7 @@ namespace SQLite11
            
             var InsertName = insertEntry.Text;
             //Userテーブルに適当なデータを追加する
-            UserModel.insertUser(InsertName);
+            UserModel.InsertUser(InsertName);
             Navigation.PushAsync(new Noname());
 
 

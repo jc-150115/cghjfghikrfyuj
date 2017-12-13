@@ -20,7 +20,7 @@ namespace SQLite11
 
         //Userテーブルに行追加するメソッドです
             //------------------------Insert文的なの--------------------------
-        public static void insertUser(string name)
+        public static void InsertUser(string name)
         {
             //データベースに接続
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
@@ -48,7 +48,7 @@ namespace SQLite11
         }
         
         //id name オーバーロード
-        public static void insertUser(int id, string name)
+        public static void InsertUser(int id, string name)
         {
             //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
@@ -69,7 +69,7 @@ namespace SQLite11
             }
         }
 
-        public static void deleteUser(int id)
+        public static void DeleteUser(int id)
         {
             //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
@@ -93,7 +93,7 @@ namespace SQLite11
 
         //Userテーブルの行データを取得します
         //--------------------------select文的なの--------------------------
-        public static List<UserModel> selectUser()
+        public static List<UserModel> SelectUser()
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
