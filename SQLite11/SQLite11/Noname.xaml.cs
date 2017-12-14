@@ -41,7 +41,6 @@ namespace SQLite11
 
             void DeleteClicked(object sender, EventArgs e)
             {
-
                 UserModel.DeleteUser(1);
                
             }

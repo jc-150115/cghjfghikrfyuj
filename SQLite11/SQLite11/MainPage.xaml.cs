@@ -64,7 +64,7 @@ namespace SQLite11
             };
             insertEntry = new Entry
             {
-                WidthRequest = 60
+                WidthRequest = 180
             };
             layout.Children.Add(Insert);
             Insert.Clicked += InsertClicked;
